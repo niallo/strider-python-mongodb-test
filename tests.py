@@ -7,6 +7,7 @@ from unittest import TestCase
 class MongoDBIntegrationTest(TestCase):
 
     def setUp(self):
+        print "Environment: %s" % os.environ
         # Fetch the Strider MongoDB URI from the environment if available.
         # Otherwise default to localhost/testdb
         mongodb_uri = os.getenv('MONGODB_URI', "mongodb://localhost/testdb")
